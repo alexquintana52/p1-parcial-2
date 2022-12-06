@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de compras</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -15,16 +15,15 @@
                 <a href="#">Parcial 2</a>
             </div>
             <div class="cart-item">
-                <button class="cart-btn" id="cart-btn">
+                <button class="cart-btn" id="show-cart">
                     <i class='bx bx-cart'></i>
                 </button>
-                <span class="cart-cont">0</span>
+                <span class="cart-cont" id="contador-carrito">0</span>
             </div>
         </nav>
     </header>
 
     <main>
-        <!--===== Filtrar Productos =====-->
         <div class="filter-box" id="filter-box">
             <button class="filter-btn" data-filter="mostrar-todo">Mostrar Todo</button>
             <button class="filter-btn" data-filter="procesadores">Procesadores</button>
@@ -35,88 +34,35 @@
             <button class="filter-btn" data-filter="placas-graficas">Placas de Videos</button>
         </div>
 
-        <!--===== Catalogo Productos =====-->
         <h2>Productos</h2>
 
-        <div class="product-container" id="products">
-<!--             <div class="product-card">
-                <div class="product-image">
-                    <img src="./img/procesador.webp" alt="">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-price">$35.000</h3>
-                    <h4 class="product-category">Procesadores</h4>
-                    <p class="product-name">Procesador Intel Core i5 10400</p>
-                    <button class="show-product show-modal">Ver Producto</button>
-                </div>
-            </div> -->
+        <div class="product-container" id="productos">
+            
         </div>
 
-        <!-- Generar el contenido del div#productos dinámicamente -->
-        <!-- Ejemplo de como armar el catalogo de productos
-        <div id="productos">
-            <div>
-                <img src="producto-de-ejemplo.jpg" alt="Nombre del producto" />
-                <div>
-                    <h3>Producto</h3>
-                    <p>Descripción del producto</h3>
-                    <p>Precio: $<span>0</span></p>
-                    <p>Categoría</p>
-                    <button>Agregar</button>
-                </div>
-            </div>-->
-
-        <!-- Generar el div#modalProducto y su contenido dinámicamente
-        <div class="modal" id="modalProducto">
-            <a class="cerrar" href="javascript:void(0)">X</a>
-            <img src="producto-de-ejemplo.jpg" alt="Nombre del producto" />
-            <h3>Producto</h3>
-            <p>Descripción</p>
-            <p>Precio: <span>$0</span></p>
-            <p>Categoría</p>
-            <button>Agregar</button>
-        </div> -->
-
-        <!-- Generar el div#modalCarrito y su contenido dinámicamente
-        <div class="modal" id="modalCarrito">
-            <a class="cerrar" href="javascript:void(0)">X</a>
-            <p>Items: <span>3</span> - Total: <span>$0</span></p>
-            <hr />
-            <ul>
-                <li>Nombre del producto <span>$0</span> <span>0 items</span> <a href="#">Eliminar</a></li>
-                <li>Nombre del producto <span>$0</span> <span>0 items</span> <a href="#">Eliminar</a></li>
-                <li>Nombre del producto <span>$0</span> <span>0 items</span> <a href="#">Eliminar</a></li>
-            </ul>
-            <button>Vaciar</button>
-            <button>Ir al checkout</button>
-        </div> -->
     </main>
 
-    <!--===== Modal Detalle Producto =====-->
-    <div class="modal" id="modal">
-        <div class="modal-product">
-            <div class="modal-image">
-                <img src="./img/procesador.webp" alt="">
+
+
+    <div class="modal-container" id="carrito">
+        <div class="modal-carrito">
+            <div class="modal-header">
+                <h3>Carrito</h3>
+                <button id="cerrarCarrito"><i class="bx bx-x"></i></button>
             </div>
-            <div class="modal-info">
-                <h3 class="modal-price">$35.000</h3>
-                <h4 class="modal-category">Procesadores</h4>
-                <p class="modal-name">Procesador Intel Core i5 10400</p>
-                <div class="modal-btns">
-                    <button class="modal-close-btn" id="close-modal">Cerrar</button>
-                    <button class="modal-add-btn" id="add-btn">Agregar al Carrito</button>
-                </div>
+            <div id="contenedor-carrito">
+<!--                 <div class="productoEnCarrito">
+                    <p>Procesador</p>
+                    <p>Precio: $35.000</p>
+                    <button class="boton-eliminar"><i class="bx bx-trash"></i></button>
+                </div> -->
             </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito">Vaciar carrito</button>
         </div>
     </div>
 
-    <!--===== Modal Ver Carrito =====-->
-    <div class="modal-cart" id="modal-cart">
-        
-    </div>
-
-<script src="js/productos.js"></script>
-<script src="js/carrito.js"></script>
-<script src="js/modal.js"></script>
+    <script src="productos.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
