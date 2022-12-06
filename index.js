@@ -117,7 +117,7 @@ const actualizarCarrito = () => {
         p.innerText = prod.nombre;
 
         let p2 = document.createElement('p');
-        p2.innerText = prod.precio;
+        p2.innerText = '$' + prod.precio;
 
         let p3 = document.createElement('p');
         p3.innerHTML = 'Cantidad: ';
