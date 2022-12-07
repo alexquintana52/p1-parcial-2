@@ -94,9 +94,7 @@ nav {
     background-color: #0e54cd;
 }
 
-.filter-btn.active {
-    background-color: #0f45a3;
-}
+
 
 /*===== Main =====*/
 
@@ -119,9 +117,14 @@ main {
 
 .producto {
     flex: 1 1 18rem;
+    max-width: 400px;
     min-height: 400px;
     border: 1px solid #ccc;
     padding: 25px;
+}
+
+.producto.hide {
+    display: none;
 }
 
 .producto img {

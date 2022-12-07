@@ -46,9 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
 productos.forEach(producto => {
     let div = document.createElement('div');
     div.className = 'producto';
+    div.setAttribute('data-item', producto.data);
     
     let img = document.createElement('img');
     img.setAttribute('src', producto.imagen);
+    
     
     let h3 = document.createElement('h3');
     h3.innerText = '$' + producto.precio;
@@ -146,4 +148,29 @@ const actualizarCarrito = () => {
     contadorCarrito.innerText = carrito.length;
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0);
 
+};
+
+
+const filterBtn = document.querySelectorAll('.filter-btn');
+const filterItem = document.querySelectorAll('.producto');
+
+for(let i = 0; i < filterBtn.length; i++){
+    filterBtn[i].addEventListener('click', function(){
+        for(let j = 0; j < filterBtn.length; j++){
+            filterBtn[i].classList.remove('acive');
+        };
+        this.classList.add('active');
+
+        let dataFilter = this.getAttribute('data-filter');
+
+        for(let k = 0; k < filterItem.length; k++){
+            filterItem[k].classList.remove('hide');
+            filterItem[k].classList.add('hide');
+
+            if(filterItem[k].getAttribute('data-item') == dataFilter || dataFilter == 'mostrar-todo'){
+                filterItem[k].classList.remove('hide');
+                filterItem[k].classList.add('active');
+            };
+        };
+    });
 };

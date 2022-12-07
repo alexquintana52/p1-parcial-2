@@ -13,6 +13,7 @@ let productos = [
         imagen: './img/procesador.webp',
         categoría: 'Procesadores',
         cantidad: 1,
+        data: 'procesadores',
     },
     {
         id: 2,
@@ -22,6 +23,7 @@ let productos = [
         imagen: './img/placa-madre.webp',
         categoría: 'Placas Madre',
         cantidad: 1,
+        data: 'placas-madres',
     },
     {
         id: 3,
@@ -31,6 +33,7 @@ let productos = [
         imagen: './img/memoria-ram.webp',
         categoría: 'Memorias RAM',
         cantidad: 1,
+        data: 'memorias-ram',
     },
     {
         id: 4,
@@ -40,6 +43,7 @@ let productos = [
         imagen: './img/fuente-alimentacion.webp',
         categoría: 'Fuentes de Alimentacion',
         cantidad: 1,
+        data: 'fuentes-alimentacion',
     },
     {
         id: 5,
@@ -49,6 +53,7 @@ let productos = [
         imagen: './img/disco-ssd.webp',
         categoría: 'Discos',
         cantidad: 1,
+        data: 'discos',
     },
     {
         id: 6,
@@ -58,6 +63,7 @@ let productos = [
         imagen: './img/placa-grafica.webp',
         categoría: 'Placas de Video',
         cantidad: 1,
+        data: 'placas-graficas',
     },
 ];
 
